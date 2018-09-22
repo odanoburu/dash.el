@@ -185,9 +185,7 @@ Return nil, used for side-effects only."
 
 (put '-dotimes 'lisp-indent-function 1)
 
-(defun -map (fn list)
-  "Return a new list consisting of the result of applying FN to the items in LIST."
-  (mapcar fn list))
+(defalias -map mapcar "Return a new list consisting of the result of applying FN to the items in LIST.")
 
 (defmacro --map (form list)
   "Anaphoric form of `-map'."
